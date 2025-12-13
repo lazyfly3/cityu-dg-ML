@@ -43,7 +43,7 @@ Model evaluation measures how well a model performs on unseen data. It's crucial
 
 5. **ROC曲线和AUC / ROC Curve and AUC:**
    - ROC曲线：真阳性率 vs 假阳性率 / ROC curve: True Positive Rate vs False Positive Rate
-   - AUC：曲线下面积，范围[0, 1] / AUC: Area under curve, range [0, 1]
+   - AUC：曲线下面积，范围$[0, 1]$ / AUC: Area under curve, range $[0, 1]$
 
 **回归指标 / Regression Metrics:**
 

@@ -46,13 +46,13 @@ K-Means是一种流行的聚类算法，通过最小化簇内平方和将数据�
 1. **初始化 / Initialization:**
    随机选择K个初始质心 / Randomly select K initial centroids
 
-2. **分配 / Assignment:**
+2. **分配 / Assignment:**\
    将每个数据点分配给最近的质心 / Assign each data point to nearest centroid:
    $$
    c^{(i)} = \arg\min_{k} \|\mathbf{x}^{(i)} - \boldsymbol{\mu}_k\|
    $$
 
-3. **更新 / Update:**
+3. **更新 / Update:**\
    重新计算每个簇的质心 / Recompute centroid for each cluster:
    $$
    \boldsymbol{\mu}_k = \frac{1}{|C_k|} \sum_{i \in C_k} \mathbf{x}^{(i)}
@@ -61,7 +61,7 @@ K-Means是一种流行的聚类算法，通过最小化簇内平方和将数据�
 4. **重复 / Repeat:**
    重复步骤2-3直到收敛 / Repeat steps 2-3 until convergence
 
-**目标函数 / Objective Function:**
+**目标函数 / Objective Function:**\
 $$
 J = \sum_{i=1}^M \sum_{k=1}^K r_{ik} \|\mathbf{x}^{(i)} - \boldsymbol{\mu}_k\|^2
 $$
@@ -106,22 +106,22 @@ Hierarchical clustering builds a tree of clusters (dendrogram) by either merging
 
 **距离度量 / Distance Metrics:**
 
-1. **单链接（Single Linkage）**: 最近点距离 / Nearest point distance
+1. **单链接（Single Linkage）**: 最近点距离 / Nearest point distance\
    $$
    d(C_i, C_j) = \min_{\mathbf{x} \in C_i, \mathbf{y} \in C_j} \|\mathbf{x} - \mathbf{y}\|
    $$
 
-2. **全链接（Complete Linkage）**: 最远点距离 / Farthest point distance
+2. **全链接（Complete Linkage）**: 最远点距离 / Farthest point distance\
    $$
    d(C_i, C_j) = \max_{\mathbf{x} \in C_i, \mathbf{y} \in C_j} \|\mathbf{x} - \mathbf{y}\|
    $$
 
-3. **平均链接（Average Linkage）**: 平均距离 / Average distance
+3. **平均链接（Average Linkage）**: 平均距离 / Average distance\
    $$
    d(C_i, C_j) = \frac{1}{|C_i||C_j|} \sum_{\mathbf{x} \in C_i} \sum_{\mathbf{y} \in C_j} \|\mathbf{x} - \mathbf{y}\|
    $$
 
-4. **质心链接（Centroid Linkage）**: 质心距离 / Centroid distance
+4. **质心链接（Centroid Linkage）**: 质心距离 / Centroid distance\
    $$
    d(C_i, C_j) = \|\boldsymbol{\mu}_i - \boldsymbol{\mu}_j\|
    $$
@@ -146,22 +146,22 @@ Clustering evaluation metrics measure the quality of clusters. They can be inter
 
 **内部指标 / Internal Metrics:**
 
-1. **轮廓系数（Silhouette Coefficient）:**
+1. **轮廓系数（Silhouette Coefficient）:**\
    $$
    s(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
    $$
    其中 / where:
    - $a(i)$：点$i$到同簇其他点的平均距离 / Average distance from point $i$ to other points in same cluster
    - $b(i)$：点$i$到最近其他簇的平均距离 / Average distance from point $i$ to nearest other cluster
-   - 范围：[-1, 1]，越大越好 / Range: [-1, 1], larger is better
+   - 范围：$[-1, 1]$，越大越好 / Range: $[-1, 1]$, larger is better
 
-2. **簇内平方和（Within-Cluster Sum of Squares, WCSS）:**
+2. **簇内平方和（Within-Cluster Sum of Squares, WCSS）:**\
    $$
    WCSS = \sum_{k=1}^K \sum_{i \in C_k} \|\mathbf{x}^{(i)} - \boldsymbol{\mu}_k\|^2
    $$
    越小越好 / Smaller is better
 
-3. **簇间平方和（Between-Cluster Sum of Squares, BCSS）:**
+3. **簇间平方和（Between-Cluster Sum of Squares, BCSS）:**\
    $$
    BCSS = \sum_{k=1}^K |C_k| \|\boldsymbol{\mu}_k - \boldsymbol{\mu}\|^2
    $$
@@ -169,17 +169,17 @@ Clustering evaluation metrics measure the quality of clusters. They can be inter
 
 **外部指标 / External Metrics:**
 
-1. **调整兰德指数（Adjusted Rand Index, ARI）:**
+1. **调整兰德指数（Adjusted Rand Index, ARI）:**\
    $$
    ARI = \frac{\sum_{ij} \binom{n_{ij}}{2} - [\sum_i \binom{a_i}{2} \sum_j \binom{b_j}{2}] / \binom{n}{2}}{\frac{1}{2}[\sum_i \binom{a_i}{2} + \sum_j \binom{b_j}{2}] - [\sum_i \binom{a_i}{2} \sum_j \binom{b_j}{2}] / \binom{n}{2}}
    $$
-   范围：[-1, 1]，越大越好 / Range: [-1, 1], larger is better
+   范围：$[-1, 1]$，越大越好 / Range: $[-1, 1]$, larger is better
 
-2. **归一化互信息（Normalized Mutual Information, NMI）:**
+2. **归一化互信息（Normalized Mutual Information, NMI）:**\
    $$
    NMI = \frac{2 \cdot I(C; K)}{H(C) + H(K)}
    $$
-   范围：[0, 1]，越大越好 / Range: [0, 1], larger is better
+   范围：$[0, 1]$，越大越好 / Range: $[0, 1]$, larger is better
 
 #### 通俗解释
 评估指标就像"打分"：
@@ -350,7 +350,7 @@ Explain how to use elbow method to choose K value in K-Means.
 1. **尝试不同的K值 / Try Different K Values:**
    对 $K = 1, 2, 3, \ldots, K_{\text{max}}$ 运行K-Means / Run K-Means for $K = 1, 2, 3, \ldots, K_{\text{max}}$
 
-2. **计算WCSS / Calculate WCSS:**
+2. **计算WCSS / Calculate WCSS:**\
    对每个 $K$，计算簇内平方和 / For each $K$, calculate within-cluster sum of squares:
    $$
    \text{WCSS}(K) = \sum_{k=1}^K \sum_{i \in C_k} \|\mathbf{x}^{(i)} - \boldsymbol{\mu}_k\|^2

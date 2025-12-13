@@ -86,7 +86,7 @@ $$
 $$
 
 #### 通俗解释
-概率就像"可能性"：P(下雨) = 0.3 表示30%可能下雨。条件概率是"在某个条件下"的可能性：P(下雨|阴天) = 0.8 表示阴天时80%可能下雨。贝叶斯定理帮助我们"反过来"思考：从结果推原因。
+概率就像"可能性"：$P(\text{下雨}) = 0.3$ 表示 $30\%$ 可能下雨。条件概率是"在某个条件下"的可能性：$P(\text{下雨}|\text{阴天}) = 0.8$ 表示阴天时 $80\%$ 可能下雨。贝叶斯定理帮助我们"反过来"思考：从结果推原因。
 
 ---
 
@@ -209,8 +209,8 @@ Explain the difference between supervised and unsupervised learning, and give on
 What is overfitting? How to detect and prevent overfitting?
 
 ### 问题3 / Problem 3:
-计算一个随机变量的期望值，其中P(X=1)=0.3, P(X=2)=0.5, P(X=3)=0.2。
-Calculate the expected value of a random variable where P(X=1)=0.3, P(X=2)=0.5, P(X=3)=0.2.
+计算一个随机变量的期望值，其中 $P(X=1)=0.3$, $P(X=2)=0.5$, $P(X=3)=0.2$。
+Calculate the expected value of a random variable where $P(X=1)=0.3$, $P(X=2)=0.5$, $P(X=3)=0.2$.
 
 ---
 
@@ -219,8 +219,8 @@ Calculate the expected value of a random variable where P(X=1)=0.3, P(X=2)=0.5, 
 ### 例题1：计算期望值 / Calculating Expected Value
 
 **题目 / Question:**  
-一个随机变量X可以取值1、2或3，对应的概率分别为0.3、0.5和0.2。计算E[X]。
-A random variable X can take values 1, 2, or 3 with probabilities 0.3, 0.5, and 0.2 respectively. Calculate E[X].
+一个随机变量 $X$ 可以取值 $1$、$2$ 或 $3$，对应的概率分别为 $0.3$、$0.5$ 和 $0.2$。计算 $E[X]$。
+A random variable $X$ can take values $1$, $2$, or $3$ with probabilities $0.3$, $0.5$, and $0.2$ respectively. Calculate $E[X]$.
 
 **详细解答 / Detailed Solution:**
 
@@ -240,16 +240,16 @@ E[X] = 0.3 + 1.0 + 0.6 = 1.9
 $$
 
 **结论 / Conclusion:**
-随机变量X的期望值为1.9。
-The expected value of random variable X is 1.9.
+随机变量 $X$ 的期望值为 $1.9$。
+The expected value of random variable $X$ is $1.9$.
 
 ---
 
 ### 例题2：条件概率应用 / Applying Conditional Probability
 
 **题目 / Question:**  
-已知P(下雨)=0.3，P(阴天|下雨)=0.8，P(阴天|不下雨)=0.2。如果今天是阴天，求下雨的概率。
-Given P(rain)=0.3, P(cloudy|rain)=0.8, P(cloudy|no rain)=0.2. If today is cloudy, what is the probability of rain?
+已知 $P(\text{下雨})=0.3$，$P(\text{阴天}|\text{下雨})=0.8$，$P(\text{阴天}|\text{不下雨})=0.2$。如果今天是阴天，求下雨的概率。
+Given $P(\text{rain})=0.3$, $P(\text{cloudy}|\text{rain})=0.8$, $P(\text{cloudy}|\text{no rain})=0.2$. If today is cloudy, what is the probability of rain?
 
 **详细解答 / Detailed Solution:**
 
@@ -258,7 +258,7 @@ $$
 P(\text{下雨}|\text{阴天}) = \frac{P(\text{阴天}|\text{下雨}) P(\text{下雨})}{P(\text{阴天})}
 $$
 
-**步骤2：计算P(阴天) / Step 2: Calculate P(cloudy)**
+**步骤2：计算 $P(\text{阴天})$ / Step 2: Calculate $P(\text{cloudy})$**
 使用全概率公式 / Using law of total probability:
 $$
 P(\text{阴天}) = P(\text{阴天}|\text{下雨})P(\text{下雨}) + P(\text{阴天}|\text{不下雨})P(\text{不下雨})
@@ -274,8 +274,8 @@ P(\text{下雨}|\text{阴天}) = \frac{0.8 \times 0.3}{0.38} = \frac{0.24}{0.38}
 $$
 
 **结论 / Conclusion:**
-如果今天是阴天，下雨的概率约为63.2%。
-If today is cloudy, the probability of rain is approximately 63.2%.
+如果今天是阴天，下雨的概率约为 $63.2\%$。
+If today is cloudy, the probability of rain is approximately $63.2\%$.
 
 ---
 

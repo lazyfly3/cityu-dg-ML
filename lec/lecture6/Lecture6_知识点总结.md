@@ -278,8 +278,8 @@ Compare linear, polynomial, and RBF kernels, and explain their respective use ca
 ### 例题1：计算点到超平面的距离 / Calculating Distance from Point to Hyperplane
 
 **题目 / Question:**  
-给定超平面方程：2x₁ + 3x₂ - 6 = 0，计算点(3, 2)到该超平面的距离。
-Given hyperplane equation: 2x₁ + 3x₂ - 6 = 0, calculate the distance from point (3, 2) to this hyperplane.
+给定超平面方程：$2x_1 + 3x_2 - 6 = 0$，计算点 $(3, 2)$ 到该超平面的距离。
+Given hyperplane equation: $2x_1 + 3x_2 - 6 = 0$, calculate the distance from point $(3, 2)$ to this hyperplane.
 
 **详细解答 / Detailed Solution:**
 
@@ -303,8 +303,8 @@ d = \frac{|\mathbf{w}^\top \mathbf{x} + b|}{\|\mathbf{w}\|} = \frac{|6|}{\sqrt{1
 $$
 
 **结论 / Conclusion:**
-点(3, 2)到超平面的距离约为1.664个单位。
-Distance from point (3, 2) to hyperplane is approximately 1.664 units.
+点 $(3, 2)$ 到超平面的距离约为 $1.664$ 个单位。
+Distance from point $(3, 2)$ to hyperplane is approximately $1.664$ units.
 
 ---
 

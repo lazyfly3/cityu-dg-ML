@@ -46,7 +46,7 @@ $$
 - $\prod_{j=1}^n$：对所有特征求乘积 / Product over all features
 
 **计算步骤 / Calculation Steps:**
-1. 估计先验概率：$P(y) = \frac{\text{类别y的样本数}}{\text{总样本数}}$ / Estimate prior: $P(y) = \frac{\text{count of class y}}{\text{total samples}}$
+1. 估计先验概率：$`P(y) = \frac{\text{类别y的样本数}}{\text{总样本数}}`$ / Estimate prior: $`P(y) = \frac{\text{count of class y}}{\text{total samples}}`$
 2. 估计条件概率：$`P(x_j|y) = \frac{\text{类别y中特征$x_j$出现的次数}}{\text{类别y的样本数}}`$ / Estimate conditional: $`P(x_j|y) = \frac{\text{count of $x_j$ in class y}}{\text{count of class y}}`$
 3. 对新样本，计算每个类别的后验概率 / For new sample, calculate posterior for each class
 4. 选择概率最大的类别 / Choose class with highest probability

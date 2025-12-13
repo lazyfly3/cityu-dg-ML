@@ -258,7 +258,7 @@ $$
 P(\text{下雨}|\text{阴天}) = \frac{P(\text{阴天}|\text{下雨}) P(\text{下雨})}{P(\text{阴天})}
 $$
 
-**步骤2：计算 $P(\text{阴天})$ / Step 2: Calculate $P(\text{cloudy})$**
+**步骤2：计算 $`P(\text{阴天})`$ / Step 2: Calculate $`P(\text{cloudy})`$**
 使用全概率公式 / Using law of total probability:
 $$
 P(\text{阴天}) = P(\text{阴天}|\text{下雨})P(\text{下雨}) + P(\text{阴天}|\text{不下雨})P(\text{不下雨})

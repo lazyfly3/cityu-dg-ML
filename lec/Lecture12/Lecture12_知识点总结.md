@@ -332,8 +332,8 @@ $$
 $$
 
 **结论 / Conclusion:**
-5折交叉验证的平均准确率为89.6%，这比单次训练-测试划分更可靠地估计了模型性能。
-5-fold cross-validation average accuracy is 89.6%, which more reliably estimates model performance than single train-test split.
+5折交叉验证的平均准确率为 $89.6\%$，这比单次训练-测试划分更可靠地估计了模型性能。
+5-fold cross-validation average accuracy is $89.6\%$, which more reliably estimates model performance than single train-test split.
 
 ---
 

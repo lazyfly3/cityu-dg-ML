@@ -65,22 +65,26 @@ Probability theory provides the mathematical foundation for machine learning. Ke
 
 **数学定义 / Mathematical Definition:**
 
-**条件概率 / Conditional Probability:**\
+**条件概率 / Conditional Probability:**
+
 $$
 P(A|B) = \frac{P(A, B)}{P(B)}
 $$
 
-**贝叶斯定理 / Bayes' Theorem:**\
+**贝叶斯定理 / Bayes' Theorem:**
+
 $$
 P(A|B) = \frac{P(B|A) P(A)}{P(B)}
 $$
 
-**期望值 / Expected Value:**\
+**期望值 / Expected Value:**
+
 $$
 E[X] = \sum_{x \in \mathcal{X}} x \cdot P(X = x)
 $$
 
-**方差 / Variance:**\
+**方差 / Variance:**
+
 $$
 \text{Var}(X) = E[X^2] - (E[X])^2
 $$
@@ -253,13 +257,16 @@ Given $`P(\text{rain})=0.3`$, $`P(\text{cloudy}|\text{rain})=0.8`$, $`P(\text{cl
 
 **详细解答 / Detailed Solution:**
 
-**步骤1：使用贝叶斯定理 / Step 1: Use Bayes' Theorem**\
+**步骤1：使用贝叶斯定理 / Step 1: Use Bayes' Theorem**
+
 $$
 P(\text{下雨}|\text{阴天}) = \frac{P(\text{阴天}|\text{下雨}) P(\text{下雨})}{P(\text{阴天})}
 $$
 
-**步骤2：计算 $`P(\text{阴天})`$ / Step 2: Calculate $`P(\text{cloudy})`$**\
+**步骤2：计算 $`P(\text{阴天})`$ / Step 2: Calculate $`P(\text{cloudy})`$**
+
 使用全概率公式 / Using law of total probability:
+
 $$
 P(\text{阴天}) = P(\text{阴天}|\text{下雨})P(\text{下雨}) + P(\text{阴天}|\text{不下雨})P(\text{不下雨})
 $$
@@ -268,7 +275,8 @@ $$
 P(\text{阴天}) = 0.8 \times 0.3 + 0.2 \times 0.7 = 0.24 + 0.14 = 0.38
 $$
 
-**步骤3：代入贝叶斯公式 / Step 3: Substitute into Bayes' Formula**\
+**步骤3：代入贝叶斯公式 / Step 3: Substitute into Bayes' Formula**
+
 $$
 P(\text{下雨}|\text{阴天}) = \frac{0.8 \times 0.3}{0.38} = \frac{0.24}{0.38} \approx 0.632
 $$

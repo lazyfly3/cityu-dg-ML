@@ -259,8 +259,8 @@ For multiclass classification, compare one-vs-rest and softmax regression approa
 ### 例题1：计算Sigmoid函数值 / Calculating Sigmoid Function Value
 
 **题目 / Question:**  
-计算sigmoid函数在z = 0, z = 2, z = -2处的值，并解释结果。
-Calculate sigmoid function values at z = 0, z = 2, z = -2, and interpret the results.
+计算sigmoid函数在 $z = 0$, $z = 2$, $z = -2$ 处的值，并解释结果。
+Calculate sigmoid function values at $z = 0$, $z = 2$, $z = -2$, and interpret the results.
 
 **详细解答 / Detailed Solution:**
 
@@ -271,45 +271,45 @@ $$
 
 **计算 / Calculations:**
 
-1. **z = 0:**
+1. **$z = 0$:**
    $$
    \sigma(0) = \frac{1}{1 + e^{0}} = \frac{1}{1 + 1} = \frac{1}{2} = 0.5
    $$
 
-2. **z = 2:**
+2. **$z = 2$:**
    $$
    \sigma(2) = \frac{1}{1 + e^{-2}} = \frac{1}{1 + 0.135} \approx \frac{1}{1.135} \approx 0.881
    $$
 
-3. **z = -2:**
+3. **$z = -2$:**
    $$
    \sigma(-2) = \frac{1}{1 + e^{2}} = \frac{1}{1 + 7.389} \approx \frac{1}{8.389} \approx 0.119
    $$
 
 **解释 / Interpretation:**
-- z = 0时，sigmoid输出0.5，表示不确定 / When z = 0, sigmoid outputs 0.5, indicating uncertainty
-- z > 0时，sigmoid输出 > 0.5，倾向于正类 / When z > 0, sigmoid outputs > 0.5, favoring positive class
-- z < 0时，sigmoid输出 < 0.5，倾向于负类 / When z < 0, sigmoid outputs < 0.5, favoring negative class
-- Sigmoid将任意实数映射到(0,1)区间，适合表示概率 / Sigmoid maps any real number to (0,1) interval, suitable for representing probabilities
+- $z = 0$ 时，sigmoid输出 $0.5$，表示不确定 / When $z = 0$, sigmoid outputs $0.5$, indicating uncertainty
+- $z > 0$ 时，sigmoid输出 $> 0.5$，倾向于正类 / When $z > 0$, sigmoid outputs $> 0.5$, favoring positive class
+- $z < 0$ 时，sigmoid输出 $< 0.5$，倾向于负类 / When $z < 0$, sigmoid outputs $< 0.5$, favoring negative class
+- Sigmoid将任意实数映射到 $(0,1)$ 区间，适合表示概率 / Sigmoid maps any real number to $(0,1)$ interval, suitable for representing probabilities
 
 ---
 
 ### 例题2：逻辑回归决策边界 / Logistic Regression Decision Boundary
 
 **题目 / Question:**  
-给定逻辑回归模型：P(y=1|x) = σ(2x₁ - x₂ + 1)，确定决策边界方程并解释其含义。
-Given logistic regression model: P(y=1|x) = σ(2x₁ - x₂ + 1), determine the decision boundary equation and explain its meaning.
+给定逻辑回归模型：$P(y=1|\mathbf{x}) = \sigma(2x_1 - x_2 + 1)$，确定决策边界方程并解释其含义。
+Given logistic regression model: $P(y=1|\mathbf{x}) = \sigma(2x_1 - x_2 + 1)$, determine the decision boundary equation and explain its meaning.
 
 **详细解答 / Detailed Solution:**
 
 **步骤1：确定决策边界 / Step 1: Determine Decision Boundary**
 
-决策边界是P(y=1|x) = 0.5的点，即 / Decision boundary is where P(y=1|x) = 0.5, i.e.:
+决策边界是 $P(y=1|\mathbf{x}) = 0.5$ 的点，即 / Decision boundary is where $P(y=1|\mathbf{x}) = 0.5$, i.e.:
 $$
 \sigma(2x_1 - x_2 + 1) = 0.5
 $$
 
-由于σ(0) = 0.5，因此 / Since σ(0) = 0.5, therefore:
+由于 $\sigma(0) = 0.5$，因此 / Since $\sigma(0) = 0.5$, therefore:
 $$
 2x_1 - x_2 + 1 = 0
 $$
@@ -322,10 +322,10 @@ $$
 **步骤3：解释 / Step 3: Interpretation**
 
 - **决策边界是一条直线** / Decision boundary is a straight line
-- **在直线上方** (x₂ > 2x₁ + 1): P(y=1|x) > 0.5，预测类别1 / Above line: predict class 1
-- **在直线下方** (x₂ < 2x₁ + 1): P(y=1|x) < 0.5，预测类别0 / Below line: predict class 0
-- **权重w = [2, -1]ᵀ**决定了直线的方向 / Weight w = [2, -1]ᵀ determines line direction
-- **偏置b = 1**决定了直线的位置 / Bias b = 1 determines line position
+- **在直线上方** ($x_2 > 2x_1 + 1$): $P(y=1|\mathbf{x}) > 0.5$，预测类别1 / Above line: predict class 1
+- **在直线下方** ($x_2 < 2x_1 + 1$): $P(y=1|\mathbf{x}) < 0.5$，预测类别0 / Below line: predict class 0
+- **权重 $\mathbf{w} = [2, -1]^\top$** 决定了直线的方向 / Weight $\mathbf{w} = [2, -1]^\top$ determines line direction
+- **偏置 $b = 1$** 决定了直线的位置 / Bias $b = 1$ determines line position
 
 ---
 

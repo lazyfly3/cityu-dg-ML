@@ -260,8 +260,8 @@ $$
 ## 练习题 / Practice Problems
 
 ### 问题1 / Problem 1:
-使用梯度下降最小化 f(x) = x² + 2x + 1，学习率α = 0.1，初始值x = 3。
-Use gradient descent to minimize f(x) = x² + 2x + 1 with learning rate α = 0.1, initial value x = 3.
+使用梯度下降最小化 $f(x) = x^2 + 2x + 1$，学习率 $\alpha = 0.1$，初始值 $x = 3$。
+Use gradient descent to minimize $f(x) = x^2 + 2x + 1$ with learning rate $\alpha = 0.1$, initial value $x = 3$.
 
 ### 问题2 / Problem 2:
 解释L1和L2正则化的区别，并说明各自的优缺点。
@@ -278,8 +278,8 @@ Derive the closed-form solution (normal equation) for linear regression.
 ### 例题1：梯度下降计算 / Gradient Descent Calculation
 
 **题目 / Question:**  
-使用梯度下降最小化函数 f(x) = x²，学习率α = 0.1，初始值x^(0) = 3。计算前3次迭代。
-Use gradient descent to minimize f(x) = x² with learning rate α = 0.1, initial value x^(0) = 3. Calculate first 3 iterations.
+使用梯度下降最小化函数 $f(x) = x^2$，学习率 $\alpha = 0.1$，初始值 $x^{(0)} = 3$。计算前3次迭代。
+Use gradient descent to minimize $f(x) = x^2$ with learning rate $\alpha = 0.1$, initial value $x^{(0)} = 3$. Calculate first 3 iterations.
 
 **详细解答 / Detailed Solution:**
 
@@ -289,23 +289,23 @@ $$
 $$
 
 **步骤2：第一次迭代 / Step 2: First Iteration**
-- 当前值 / Current value: x^(0) = 3
-- 梯度 / Gradient: ∇f(3) = 2 × 3 = 6
-- 更新 / Update: x^(1) = 3 - 0.1 × 6 = 3 - 0.6 = 2.4
+- 当前值 / Current value: $x^{(0)} = 3$
+- 梯度 / Gradient: $\nabla f(3) = 2 \times 3 = 6$
+- 更新 / Update: $x^{(1)} = 3 - 0.1 \times 6 = 3 - 0.6 = 2.4$
 
 **步骤3：第二次迭代 / Step 3: Second Iteration**
-- 当前值 / Current value: x^(1) = 2.4
-- 梯度 / Gradient: ∇f(2.4) = 2 × 2.4 = 4.8
-- 更新 / Update: x^(2) = 2.4 - 0.1 × 4.8 = 2.4 - 0.48 = 1.92
+- 当前值 / Current value: $x^{(1)} = 2.4$
+- 梯度 / Gradient: $\nabla f(2.4) = 2 \times 2.4 = 4.8$
+- 更新 / Update: $x^{(2)} = 2.4 - 0.1 \times 4.8 = 2.4 - 0.48 = 1.92$
 
 **步骤4：第三次迭代 / Step 4: Third Iteration**
-- 当前值 / Current value: x^(2) = 1.92
-- 梯度 / Gradient: ∇f(1.92) = 2 × 1.92 = 3.84
-- 更新 / Update: x^(3) = 1.92 - 0.1 × 3.84 = 1.92 - 0.384 = 1.536
+- 当前值 / Current value: $x^{(2)} = 1.92$
+- 梯度 / Gradient: $\nabla f(1.92) = 2 \times 1.92 = 3.84$
+- 更新 / Update: $x^{(3)} = 1.92 - 0.1 \times 3.84 = 1.92 - 0.384 = 1.536$
 
 **结论 / Conclusion:**
-可以看到x逐渐接近最小值0。经过3次迭代，x从3减少到1.536。
-We can see x gradually approaches the minimum 0. After 3 iterations, x decreases from 3 to 1.536.
+可以看到 $x$ 逐渐接近最小值 $0$。经过3次迭代，$x$ 从 $3$ 减少到 $1.536$。
+We can see $x$ gradually approaches the minimum $0$. After 3 iterations, $x$ decreases from $3$ to $1.536$.
 
 ---
 
@@ -332,10 +332,10 @@ $$
 2. **减少模型复杂度 / Reduces Model Complexity**: 较小的权重意味着更平滑的决策边界
 3. **防止过拟合 / Prevents Overfitting**: 通过限制模型容量，减少对训练数据的过度拟合
 
-**参数λ的影响 / Effect of Parameter λ:**
-- λ大：更强的正则化，权重更小，可能欠拟合 / Large λ: stronger regularization, smaller weights, may underfit
-- λ小：较弱的正则化，权重较大，可能过拟合 / Small λ: weaker regularization, larger weights, may overfit
-- λ=0：无正则化 / λ=0: no regularization
+**参数$\lambda$的影响 / Effect of Parameter $\lambda$:**
+- $\lambda$大：更强的正则化，权重更小，可能欠拟合 / Large $\lambda$: stronger regularization, smaller weights, may underfit
+- $\lambda$小：较弱的正则化，权重较大，可能过拟合 / Small $\lambda$: weaker regularization, larger weights, may overfit
+- $\lambda=0$：无正则化 / $\lambda=0$: no regularization
 
 ---
 

@@ -293,10 +293,10 @@ $$
 $$
 
 **步骤4：特征值分解 / Step 4: Eigenvalue Decomposition**
-特征值 / Eigenvalues: λ₁ ≈ 3.0, λ₂ ≈ 0.75
+特征值 / Eigenvalues: $\lambda_1 \approx 3.0$, $\lambda_2 \approx 0.75$
 特征向量 / Eigenvectors: 
-- $\mathbf{v}_1 \approx [0.866, 0.5]^\top$ (对应λ₁)
-- $\mathbf{v}_2 \approx [-0.5, 0.866]^\top$ (对应λ₂)
+- $\mathbf{v}_1 \approx [0.866, 0.5]^\top$ (对应 $\lambda_1$)
+- $\mathbf{v}_2 \approx [-0.5, 0.866]^\top$ (对应 $\lambda_2$)
 
 **步骤5：第一主成分 / Step 5: First Principal Component**
 第一主成分是最大特征值对应的归一化特征向量：
@@ -325,7 +325,7 @@ $$
 \boldsymbol{\Sigma} = \mathbf{V} \boldsymbol{\Lambda} \mathbf{V}^\top
 $$
 
-特征值按降序排列：λ₁ ≥ λ₂ ≥ ... ≥ λ_d / Eigenvalues in descending order: λ₁ ≥ λ₂ ≥ ... ≥ λ_d
+特征值按降序排列：$\lambda_1 \geq \lambda_2 \geq \ldots \geq \lambda_d$ / Eigenvalues in descending order: $\lambda_1 \geq \lambda_2 \geq \ldots \geq \lambda_d$
 
 **步骤2：选择前k个主成分 / Step 2: Select First k Principal Components**
 选择前k个特征向量 / Select first k eigenvectors:
@@ -347,7 +347,7 @@ $$
 **示例 / Example:**
 假设d=10，k=2，特征值为：
 Suppose d=10, k=2, eigenvalues:
-- λ₁ = 5.0, λ₂ = 3.0, λ₃ = 1.0, ..., λ₁₀ = 0.1
+- $\lambda_1 = 5.0$, $\lambda_2 = 3.0$, $\lambda_3 = 1.0$, $\ldots$, $\lambda_{10} = 0.1$
 
 保留的方差比例 / Proportion of variance preserved:
 $$

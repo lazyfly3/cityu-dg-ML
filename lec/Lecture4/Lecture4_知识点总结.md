@@ -42,12 +42,12 @@ $$
 
 **符号说明 / Symbol Explanation:**
 - $P(y)$：类别y的先验概率 / Prior probability of class y
-- $P(x_j|y)$：在类别y下，特征$x_j$的条件概率 / Conditional probability of feature $x_j$ given class y
+- $`P(x_j|y)`$：在类别y下，特征$x_j$的条件概率 / Conditional probability of feature $x_j$ given class y
 - $\prod_{j=1}^n$：对所有特征求乘积 / Product over all features
 
 **计算步骤 / Calculation Steps:**
 1. 估计先验概率：$P(y) = \frac{\text{类别y的样本数}}{\text{总样本数}}$ / Estimate prior: $P(y) = \frac{\text{count of class y}}{\text{total samples}}$
-2. 估计条件概率：$P(x_j|y) = \frac{\text{类别y中特征$x_j$出现的次数}}{\text{类别y的样本数}}$ / Estimate conditional: $P(x_j|y) = \frac{\text{count of $x_j$ in class y}}{\text{count of class y}}$
+2. 估计条件概率：$`P(x_j|y) = \frac{\text{类别y中特征$x_j$出现的次数}}{\text{类别y的样本数}}`$ / Estimate conditional: $`P(x_j|y) = \frac{\text{count of $x_j$ in class y}}{\text{count of class y}}`$
 3. 对新样本，计算每个类别的后验概率 / For new sample, calculate posterior for each class
 4. 选择概率最大的类别 / Choose class with highest probability
 
@@ -84,7 +84,7 @@ $$
 其中 / where:
 - $\theta$：模型参数 / Model parameters
 - $\mathcal{D}$：观测数据 / Observed data
-- $P(\mathcal{D}) = \int P(\mathcal{D}|\theta) P(\theta) d\theta$：证据（归一化常数）/ Evidence (normalization constant)
+- $`P(\mathcal{D}) = \int P(\mathcal{D}|\theta) P(\theta) d\theta`$：证据（归一化常数）/ Evidence (normalization constant)
 
 **最大后验估计（MAP）/ Maximum A Posteriori (MAP):**
 $$
@@ -99,12 +99,12 @@ $$
 ## 3. Generative vs Discriminative / 3. 生成式 vs 判别式
 
 #### English
-- **Generative models**: Model the joint distribution $P(\mathbf{x}, y)$ and use it to compute $P(y|\mathbf{x})$
-- **Discriminative models**: Directly model the conditional distribution $P(y|\mathbf{x})$
+- **Generative models**: Model the joint distribution $P(\mathbf{x}, y)$ and use it to compute $`P(y|\mathbf{x})`$
+- **Discriminative models**: Directly model the conditional distribution $`P(y|\mathbf{x})`$
 
 #### 中文
-- **生成式模型**：建模联合分布$P(\mathbf{x}, y)$并用它计算$P(y|\mathbf{x})$
-- **判别式模型**：直接建模条件分布$P(y|\mathbf{x})$
+- **生成式模型**：建模联合分布$P(\mathbf{x}, y)$并用它计算$`P(y|\mathbf{x})`$
+- **判别式模型**：直接建模条件分布$`P(y|\mathbf{x})`$
 
 **生成式模型示例 / Generative Model Example:**
 - 朴素贝叶斯 / Naive Bayes
@@ -120,7 +120,7 @@ $$
 
 | 特性 / Feature | 生成式 / Generative | 判别式 / Discriminative |
 |--------------|-------------------|----------------------|
-| 建模 / Models | $P(\mathbf{x}, y)$ | $P(y|\mathbf{x})$ |
+| 建模 / Models | $P(\mathbf{x}, y)$ | $`P(y|\mathbf{x})`$ |
 | 优点 / Pros | 可以生成样本 / Can generate samples | 通常分类性能更好 / Usually better classification |
 | 缺点 / Cons | 需要更多假设 / Needs more assumptions | 不能生成样本 / Cannot generate samples |
 
@@ -323,16 +323,16 @@ Predict the class of new sample (feature1=1, feature2=1).
 **步骤2：估计条件概率 / Step 2: Estimate Conditional Probabilities**
 
 对于类别A / For class A:
-- $P(\text{特征1}=1|A) = 2/2 = 1.0$
-- $P(\text{特征1}=0|A) = 0/2 = 0.0$
-- $P(\text{特征2}=1|A) = 1/2 = 0.5$
-- $P(\text{特征2}=0|A) = 1/2 = 0.5$
+- $`P(\text{特征1}=1|A) = 2/2 = 1.0`$
+- $`P(\text{特征1}=0|A) = 0/2 = 0.0`$
+- $`P(\text{特征2}=1|A) = 1/2 = 0.5`$
+- $`P(\text{特征2}=0|A) = 1/2 = 0.5`$
 
 对于类别B / For class B:
-- $P(\text{特征1}=1|B) = 0/2 = 0.0$
-- $P(\text{特征1}=0|B) = 2/2 = 1.0$
-- $P(\text{特征2}=1|B) = 1/2 = 0.5$
-- $P(\text{特征2}=0|B) = 1/2 = 0.5$
+- $`P(\text{特征1}=1|B) = 0/2 = 0.0`$
+- $`P(\text{特征1}=0|B) = 2/2 = 1.0`$
+- $`P(\text{特征2}=1|B) = 1/2 = 0.5`$
+- $`P(\text{特征2}=0|B) = 1/2 = 0.5`$
 
 **步骤3：计算后验概率 / Step 3: Calculate Posterior Probabilities**
 
@@ -347,8 +347,8 @@ P(B|\text{特征1}=1, \text{特征2}=1) \propto P(B) \times P(\text{特征1}=1|B
 $$
 
 **步骤4：归一化并预测 / Step 4: Normalize and Predict**
-- $P(A|\text{新样本}) = 0.25 / (0.25 + 0.0) = 1.0$
-- $P(B|\text{新样本}) = 0.0 / (0.25 + 0.0) = 0.0$
+- $`P(A|\text{新样本}) = 0.25 / (0.25 + 0.0) = 1.0`$
+- $`P(B|\text{新样本}) = 0.0 / (0.25 + 0.0) = 0.0`$
 
 **结论 / Conclusion:**
 预测类别为A。
@@ -359,8 +359,8 @@ Predicted class is A.
 ### 例题2：贝叶斯更新 / Bayesian Update
 
 **题目 / Question:**  
-假设先验概率 $P(\text{疾病})=0.01$，检测准确率 $P(\text{阳性}|\text{疾病})=0.99$，$P(\text{阴性}|\text{健康})=0.95$。如果检测结果为阳性，求患病的后验概率。
-Suppose prior probability $P(\text{disease})=0.01$, test accuracy $P(\text{positive}|\text{disease})=0.99$, $P(\text{negative}|\text{healthy})=0.95$. If test result is positive, find posterior probability of having disease.
+假设先验概率 $`P(\text{疾病})=0.01`$，检测准确率 $`P(\text{阳性}|\text{疾病})=0.99`$，$`P(\text{阴性}|\text{健康})=0.95`$。如果检测结果为阳性，求患病的后验概率。
+Suppose prior probability $`P(\text{disease})=0.01`$, test accuracy $`P(\text{positive}|\text{disease})=0.99`$, $`P(\text{negative}|\text{healthy})=0.95`$. If test result is positive, find posterior probability of having disease.
 
 **详细解答 / Detailed Solution:**
 

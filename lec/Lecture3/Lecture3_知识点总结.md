@@ -34,7 +34,7 @@ P(y=0|\mathbf{x}) = 1 - P(y=1|\mathbf{x}) = \frac{e^{-(\mathbf{w}^\top \mathbf{x
 $$
 
 **符号说明 / Symbol Explanation:**
-- $P(y=1|\mathbf{x})$：在给定特征$\mathbf{x}$下，类别为1的概率 / Probability of class 1 given features $\mathbf{x}$
+- $`P(y=1|\mathbf{x})`$：在给定特征$\mathbf{x}$下，类别为1的概率 / Probability of class 1 given features $\mathbf{x}$
 - $\sigma(z)$：Sigmoid函数，将实数映射到(0,1)区间 / Sigmoid function, maps real numbers to (0,1)
 - $\mathbf{w}$：权重向量 / Weight vector
 - $b$：偏置项 / Bias term
@@ -66,7 +66,7 @@ $$
 
 其中 / where:
 - $y^{(i)} \in \{0, 1\}$：真实标签 / True label
-- $\hat{y}^{(i)} = P(y=1|\mathbf{x}^{(i)})$：预测概率 / Predicted probability
+- $`\hat{y}^{(i)} = P(y=1|\mathbf{x}^{(i)})`$：预测概率 / Predicted probability
 
 **梯度计算 / Gradient Calculation:**
 
@@ -101,7 +101,7 @@ A decision boundary is the surface that separates different classes in the featu
 
 **决策边界方程 / Decision Boundary Equation:**
 
-当 / When $P(y=1|\mathbf{x}) = P(y=0|\mathbf{x}) = 0.5$:
+当 / When $`P(y=1|\mathbf{x}) = P(y=0|\mathbf{x}) = 0.5`$:
 $$
 \mathbf{w}^\top \mathbf{x} + b = 0
 $$
@@ -154,7 +154,7 @@ $$
 
 其中 / where:
 - $y_j^{(i)}$：如果样本i属于类别j则为1，否则为0 / 1 if sample i belongs to class j, else 0
-- $\hat{y}_j^{(i)} = P(y=j|\mathbf{x}^{(i)})$：预测概率 / Predicted probability
+- $`\hat{y}_j^{(i)} = P(y=j|\mathbf{x}^{(i)})`$：预测概率 / Predicted probability
 
 #### 通俗解释
 多类分类就像"多选一"：不是选A或B，而是从A、B、C、D等多个选项中选一个。Softmax把所有类别的"分数"转换成概率，概率最大的就是预测类别。
@@ -297,14 +297,14 @@ $$
 ### 例题2：逻辑回归决策边界 / Logistic Regression Decision Boundary
 
 **题目 / Question:**  
-给定逻辑回归模型：$P(y=1|\mathbf{x}) = \sigma(2x_1 - x_2 + 1)$，确定决策边界方程并解释其含义。
-Given logistic regression model: $P(y=1|\mathbf{x}) = \sigma(2x_1 - x_2 + 1)$, determine the decision boundary equation and explain its meaning.
+给定逻辑回归模型：$`P(y=1|\mathbf{x}) = \sigma(2x_1 - x_2 + 1)`$，确定决策边界方程并解释其含义。
+Given logistic regression model: $`P(y=1|\mathbf{x}) = \sigma(2x_1 - x_2 + 1)`$, determine the decision boundary equation and explain its meaning.
 
 **详细解答 / Detailed Solution:**
 
 **步骤1：确定决策边界 / Step 1: Determine Decision Boundary**
 
-决策边界是 $P(y=1|\mathbf{x}) = 0.5$ 的点，即 / Decision boundary is where $P(y=1|\mathbf{x}) = 0.5$, i.e.:
+决策边界是 $`P(y=1|\mathbf{x}) = 0.5`$ 的点，即 / Decision boundary is where $`P(y=1|\mathbf{x}) = 0.5`$, i.e.:
 $$
 \sigma(2x_1 - x_2 + 1) = 0.5
 $$
@@ -322,8 +322,8 @@ $$
 **步骤3：解释 / Step 3: Interpretation**
 
 - **决策边界是一条直线** / Decision boundary is a straight line
-- **在直线上方** ($x_2 > 2x_1 + 1$): $P(y=1|\mathbf{x}) > 0.5$，预测类别1 / Above line: predict class 1
-- **在直线下方** ($x_2 < 2x_1 + 1$): $P(y=1|\mathbf{x}) < 0.5$，预测类别0 / Below line: predict class 0
+- **在直线上方** ($x_2 > 2x_1 + 1$): $`P(y=1|\mathbf{x}) > 0.5`$，预测类别1 / Above line: predict class 1
+- **在直线下方** ($x_2 < 2x_1 + 1$): $`P(y=1|\mathbf{x}) < 0.5`$，预测类别0 / Below line: predict class 0
 - **权重 $\mathbf{w} = [2, -1]^\top$** 决定了直线的方向 / Weight $\mathbf{w} = [2, -1]^\top$ determines line direction
 - **偏置 $b = 1$** 决定了直线的位置 / Bias $b = 1$ determines line position
 

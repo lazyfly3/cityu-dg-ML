@@ -50,16 +50,16 @@ Supervised learning uses labeled training data to learn a mapping from inputs to
 #### English
 Probability theory provides the mathematical foundation for machine learning. Key concepts include:
 - **Probability**: $P(A)$ measures the likelihood of event $A$
-- **Conditional Probability**: $P(A|B)$ is the probability of $A$ given $B$
-- **Bayes' Theorem**: $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
+- **Conditional Probability**: $`P(A|B)`$ is the probability of $A$ given $B$
+- **Bayes' Theorem**: $`P(A|B) = \frac{P(B|A)P(A)}{P(B)}`$
 - **Expectation**: $E[X] = \sum_x x \cdot P(X=x)$
 - **Variance**: $\text{Var}(X) = E[X^2] - (E[X])^2$
 
 #### 中文
 概率论为机器学习提供数学基础。核心概念包括：
 - **概率**：$P(A)$ 衡量事件$A$发生的可能性
-- **条件概率**：$P(A|B)$ 是在$B$发生的条件下$A$的概率
-- **贝叶斯定理**：$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
+- **条件概率**：$`P(A|B)`$ 是在$B$发生的条件下$A$的概率
+- **贝叶斯定理**：$`P(A|B) = \frac{P(B|A)P(A)}{P(B)}`$
 - **期望**：$E[X] = \sum_x x \cdot P(X=x)$
 - **方差**：$\text{Var}(X) = E[X^2] - (E[X])^2$
 
@@ -86,7 +86,7 @@ $$
 $$
 
 #### 通俗解释
-概率就像"可能性"：$P(\text{下雨}) = 0.3$ 表示 $30\%$ 可能下雨。条件概率是"在某个条件下"的可能性：$P(\text{下雨}|\text{阴天}) = 0.8$ 表示阴天时 $80\%$ 可能下雨。贝叶斯定理帮助我们"反过来"思考：从结果推原因。
+概率就像"可能性"：$`P(\text{下雨}) = 0.3`$ 表示 $30\%$ 可能下雨。条件概率是"在某个条件下"的可能性：$`P(\text{下雨}|\text{阴天}) = 0.8`$ 表示阴天时 $80\%$ 可能下雨。贝叶斯定理帮助我们"反过来"思考：从结果推原因。
 
 ---
 
@@ -248,8 +248,8 @@ The expected value of random variable $X$ is $1.9$.
 ### 例题2：条件概率应用 / Applying Conditional Probability
 
 **题目 / Question:**  
-已知 $P(\text{下雨})=0.3$，$P(\text{阴天}|\text{下雨})=0.8$，$P(\text{阴天}|\text{不下雨})=0.2$。如果今天是阴天，求下雨的概率。
-Given $P(\text{rain})=0.3$, $P(\text{cloudy}|\text{rain})=0.8$, $P(\text{cloudy}|\text{no rain})=0.2$. If today is cloudy, what is the probability of rain?
+已知 $`P(\text{下雨})=0.3`$，$`P(\text{阴天}|\text{下雨})=0.8`$，$`P(\text{阴天}|\text{不下雨})=0.2`$。如果今天是阴天，求下雨的概率。
+Given $`P(\text{rain})=0.3`$, $`P(\text{cloudy}|\text{rain})=0.8`$, $`P(\text{cloudy}|\text{no rain})=0.2`$. If today is cloudy, what is the probability of rain?
 
 **详细解答 / Detailed Solution:**
 

@@ -304,27 +304,27 @@ Given 10 samples, use 5-fold cross-validation to evaluate model. Explain how to 
 迭代1 / Iteration 1:
 - 训练集：折2-5（样本3-10）/ Training set: folds 2-5 (samples 3-10)
 - 验证集：折1（样本1, 2）/ Validation set: fold 1 (samples 1, 2)
-- 性能：accuracy₁ = 0.9 / Performance: accuracy₁ = 0.9
+- 性能：$\text{accuracy}_1 = 0.9$ / Performance: $\text{accuracy}_1 = 0.9$
 
 迭代2 / Iteration 2:
 - 训练集：折1, 3-5（样本1,2,5-10）/ Training set: folds 1, 3-5 (samples 1,2,5-10)
 - 验证集：折2（样本3, 4）/ Validation set: fold 2 (samples 3, 4)
-- 性能：accuracy₂ = 0.85 / Performance: accuracy₂ = 0.85
+- 性能：$\text{accuracy}_2 = 0.85$ / Performance: $\text{accuracy}_2 = 0.85$
 
 迭代3 / Iteration 3:
 - 训练集：折1-2, 4-5 / Training set: folds 1-2, 4-5
 - 验证集：折3 / Validation set: fold 3
-- 性能：accuracy₃ = 0.95 / Performance: accuracy₃ = 0.95
+- 性能：$\text{accuracy}_3 = 0.95$ / Performance: $\text{accuracy}_3 = 0.95$
 
 迭代4 / Iteration 4:
 - 训练集：折1-3, 5 / Training set: folds 1-3, 5
 - 验证集：折4 / Validation set: fold 4
-- 性能：accuracy₄ = 0.9 / Performance: accuracy₄ = 0.9
+- 性能：$\text{accuracy}_4 = 0.9$ / Performance: $\text{accuracy}_4 = 0.9$
 
 迭代5 / Iteration 5:
 - 训练集：折1-4 / Training set: folds 1-4
 - 验证集：折5 / Validation set: fold 5
-- 性能：accuracy₅ = 0.88 / Performance: accuracy₅ = 0.88
+- 性能：$\text{accuracy}_5 = 0.88$ / Performance: $\text{accuracy}_5 = 0.88$
 
 **步骤3：计算平均性能 / Step 3: Calculate Average Performance**
 $$

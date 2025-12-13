@@ -317,36 +317,38 @@ Predict the class of new sample (feature1=1, feature2=1).
 **详细解答 / Detailed Solution:**
 
 **步骤1：估计先验概率 / Step 1: Estimate Prior Probabilities**
-- P(A) = 2/4 = 0.5
-- P(B) = 2/4 = 0.5
+- $P(A) = 2/4 = 0.5$
+- $P(B) = 2/4 = 0.5$
 
 **步骤2：估计条件概率 / Step 2: Estimate Conditional Probabilities**
 
 对于类别A / For class A:
-- P(特征1=1|A) = 2/2 = 1.0
-- P(特征1=0|A) = 0/2 = 0.0
-- P(特征2=1|A) = 1/2 = 0.5
-- P(特征2=0|A) = 1/2 = 0.5
+- $P(\text{特征1}=1|A) = 2/2 = 1.0$
+- $P(\text{特征1}=0|A) = 0/2 = 0.0$
+- $P(\text{特征2}=1|A) = 1/2 = 0.5$
+- $P(\text{特征2}=0|A) = 1/2 = 0.5$
 
 对于类别B / For class B:
-- P(特征1=1|B) = 0/2 = 0.0
-- P(特征1=0|B) = 2/2 = 1.0
-- P(特征2=1|B) = 1/2 = 0.5
-- P(特征2=0|B) = 1/2 = 0.5
+- $P(\text{特征1}=1|B) = 0/2 = 0.0$
+- $P(\text{特征1}=0|B) = 2/2 = 1.0$
+- $P(\text{特征2}=1|B) = 1/2 = 0.5$
+- $P(\text{特征2}=0|B) = 1/2 = 0.5$
 
 **步骤3：计算后验概率 / Step 3: Calculate Posterior Probabilities**
 
-对于新样本(1,1) / For new sample (1,1):
+对于新样本 $(1,1)$ / For new sample $(1,1)$:
 
-P(A|特征1=1, 特征2=1) ∝ P(A) × P(特征1=1|A) × P(特征2=1|A)
-= 0.5 × 1.0 × 0.5 = 0.25
+$$
+P(A|\text{特征1}=1, \text{特征2}=1) \propto P(A) \times P(\text{特征1}=1|A) \times P(\text{特征2}=1|A) = 0.5 \times 1.0 \times 0.5 = 0.25
+$$
 
-P(B|特征1=1, 特征2=1) ∝ P(B) × P(特征1=1|B) × P(特征2=1|B)
-= 0.5 × 0.0 × 0.5 = 0.0
+$$
+P(B|\text{特征1}=1, \text{特征2}=1) \propto P(B) \times P(\text{特征1}=1|B) \times P(\text{特征2}=1|B) = 0.5 \times 0.0 \times 0.5 = 0.0
+$$
 
 **步骤4：归一化并预测 / Step 4: Normalize and Predict**
-- P(A|新样本) = 0.25 / (0.25 + 0.0) = 1.0
-- P(B|新样本) = 0.0 / (0.25 + 0.0) = 0.0
+- $P(A|\text{新样本}) = 0.25 / (0.25 + 0.0) = 1.0$
+- $P(B|\text{新样本}) = 0.0 / (0.25 + 0.0) = 0.0$
 
 **结论 / Conclusion:**
 预测类别为A。
@@ -357,8 +359,8 @@ Predicted class is A.
 ### 例题2：贝叶斯更新 / Bayesian Update
 
 **题目 / Question:**  
-假设先验概率P(疾病)=0.01，检测准确率P(阳性|疾病)=0.99，P(阴性|健康)=0.95。如果检测结果为阳性，求患病的后验概率。
-Suppose prior probability P(disease)=0.01, test accuracy P(positive|disease)=0.99, P(negative|healthy)=0.95. If test result is positive, find posterior probability of having disease.
+假设先验概率 $P(\text{疾病})=0.01$，检测准确率 $P(\text{阳性}|\text{疾病})=0.99$，$P(\text{阴性}|\text{健康})=0.95$。如果检测结果为阳性，求患病的后验概率。
+Suppose prior probability $P(\text{disease})=0.01$, test accuracy $P(\text{positive}|\text{disease})=0.99$, $P(\text{negative}|\text{healthy})=0.95$. If test result is positive, find posterior probability of having disease.
 
 **详细解答 / Detailed Solution:**
 

@@ -294,8 +294,8 @@ Explain how to choose K value in K-Means and compare different methods.
 ### 例题1：K-Means迭代计算 / K-Means Iteration Calculation
 
 **题目 / Question:**  
-给定数据点：(1, 1), (1, 2), (2, 1), (8, 8), (9, 8)，使用K=2进行K-Means聚类，初始质心为(1, 1)和(8, 8)。
-Given data points: (1, 1), (1, 2), (2, 1), (8, 8), (9, 8), use K=2 for K-Means clustering with initial centroids (1, 1) and (8, 8).
+给定数据点：$(1, 1)$, $(1, 2)$, $(2, 1)$, $(8, 8)$, $(9, 8)$，使用 $K=2$ 进行K-Means聚类，初始质心为 $(1, 1)$ 和 $(8, 8)$。
+Given data points: $(1, 1)$, $(1, 2)$, $(2, 1)$, $(8, 8)$, $(9, 8)$, use $K=2$ for K-Means clustering with initial centroids $(1, 1)$ and $(8, 8)$.
 
 **详细解答 / Detailed Solution:**
 
@@ -303,29 +303,29 @@ Given data points: (1, 1), (1, 2), (2, 1), (8, 8), (9, 8), use K=2 for K-Means c
 
 计算每个点到质心的距离 / Calculate distance from each point to centroids:
 
-点到(1,1)的距离 / Distance to (1,1):
-- (1,1): 0
-- (1,2): 1
-- (2,1): 1
-- (8,8): 9.90
-- (9,8): 10.63
+点到 $(1,1)$ 的距离 / Distance to $(1,1)$:
+- $(1,1)$: $0$
+- $(1,2)$: $1$
+- $(2,1)$: $1$
+- $(8,8)$: $9.90$
+- $(9,8)$: $10.63$
 
-点到(8,8)的距离 / Distance to (8,8):
-- (1,1): 9.90
-- (1,2): 9.22
-- (2,1): 9.22
-- (8,8): 0
-- (9,8): 1
+点到 $(8,8)$ 的距离 / Distance to $(8,8)$:
+- $(1,1)$: $9.90$
+- $(1,2)$: $9.22$
+- $(2,1)$: $9.22$
+- $(8,8)$: $0$
+- $(9,8)$: $1$
 
 分配结果 / Assignment:
-- 簇1：(1,1), (1,2), (2,1) / Cluster 1: (1,1), (1,2), (2,1)
-- 簇2：(8,8), (9,8) / Cluster 2: (8,8), (9,8)
+- 簇1：$(1,1)$, $(1,2)$, $(2,1)$ / Cluster 1: $(1,1)$, $(1,2)$, $(2,1)$
+- 簇2：$(8,8)$, $(9,8)$ / Cluster 2: $(8,8)$, $(9,8)$
 
 **步骤2：第一次迭代 - 更新质心 / Step 2: First Iteration - Update Centroids**
 
 新质心 / New centroids:
-- 簇1质心 / Cluster 1 centroid: ((1+1+2)/3, (1+2+1)/3) = (1.33, 1.33)
-- 簇2质心 / Cluster 2 centroid: ((8+9)/2, (8+8)/2) = (8.5, 8.0)
+- 簇1质心 / Cluster 1 centroid: $((1+1+2)/3, (1+2+1)/3) = (1.33, 1.33)$
+- 簇2质心 / Cluster 2 centroid: $((8+9)/2, (8+8)/2) = (8.5, 8.0)$
 
 **步骤3：第二次迭代 / Step 3: Second Iteration**
 
@@ -348,12 +348,12 @@ Explain how to use elbow method to choose K value in K-Means.
 **肘部方法步骤 / Elbow Method Steps:**
 
 1. **尝试不同的K值 / Try Different K Values:**
-   对K = 1, 2, 3, ..., K_max运行K-Means / Run K-Means for K = 1, 2, 3, ..., K_max
+   对 $K = 1, 2, 3, \ldots, K_{\text{max}}$ 运行K-Means / Run K-Means for $K = 1, 2, 3, \ldots, K_{\text{max}}$
 
 2. **计算WCSS / Calculate WCSS:**
-   对每个K，计算簇内平方和 / For each K, calculate within-cluster sum of squares:
+   对每个 $K$，计算簇内平方和 / For each $K$, calculate within-cluster sum of squares:
    $$
-   WCSS(K) = \sum_{k=1}^K \sum_{i \in C_k} \|\mathbf{x}^{(i)} - \boldsymbol{\mu}_k\|^2
+   \text{WCSS}(K) = \sum_{k=1}^K \sum_{i \in C_k} \|\mathbf{x}^{(i)} - \boldsymbol{\mu}_k\|^2
    $$
 
 3. **绘制WCSS vs K / Plot WCSS vs K:**
@@ -361,22 +361,22 @@ Explain how to use elbow method to choose K value in K-Means.
 
 **示例数据 / Example Data:**
 假设WCSS值如下 / Suppose WCSS values:
-- K=1: WCSS = 100
-- K=2: WCSS = 30
-- K=3: WCSS = 15
-- K=4: WCSS = 10
-- K=5: WCSS = 8
-- K=6: WCSS = 7
+- $K=1$: $\text{WCSS} = 100$
+- $K=2$: $\text{WCSS} = 30$
+- $K=3$: $\text{WCSS} = 15$
+- $K=4$: $\text{WCSS} = 10$
+- $K=5$: $\text{WCSS} = 8$
+- $K=6$: $\text{WCSS} = 7$
 
 **分析 / Analysis:**
-- K=1到K=2：WCSS大幅下降（100→30）/ K=1 to K=2: large WCSS drop (100→30)
-- K=2到K=3：WCSS继续下降（30→15）/ K=2 to K=3: continued WCSS drop (30→15)
-- K=3到K=4：WCSS下降较小（15→10）/ K=3 to K=4: smaller WCSS drop (15→10)
-- K=4之后：WCSS下降很小 / After K=4: very small WCSS drops
+- $K=1$ 到 $K=2$：WCSS大幅下降（$100 \to 30$）/ $K=1$ to $K=2$: large WCSS drop ($100 \to 30$)
+- $K=2$ 到 $K=3$：WCSS继续下降（$30 \to 15$）/ $K=2$ to $K=3$: continued WCSS drop ($30 \to 15$)
+- $K=3$ 到 $K=4$：WCSS下降较小（$15 \to 10$）/ $K=3$ to $K=4$: smaller WCSS drop ($15 \to 10$)
+- $K=4$ 之后：WCSS下降很小 / After $K=4$: very small WCSS drops
 
 **结论 / Conclusion:**
-肘部在K=3或K=4处，选择K=3或K=4。通常选择K=3，因为增加K=4带来的改善很小。
-Elbow is at K=3 or K=4, choose K=3 or K=4. Usually choose K=3, as improvement from K=4 is small.
+肘部在 $K=3$ 或 $K=4$ 处，选择 $K=3$ 或 $K=4$。通常选择 $K=3$，因为增加 $K=4$ 带来的改善很小。
+Elbow is at $K=3$ or $K=4$, choose $K=3$ or $K=4$. Usually choose $K=3$, as improvement from $K=4$ is small.
 
 ---
 

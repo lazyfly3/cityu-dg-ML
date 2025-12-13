@@ -283,11 +283,11 @@ Explain how Bagging makes predictions for a new test sample and explain why ense
    - 模型T：在Bootstrap样本T上训练 / Model T: trained on bootstrap sample T
 
 2. **每个模型进行预测 / Each Model Makes Prediction:**
-   - 模型1预测：ŷ₁ = 0.7 / Model 1 predicts: ŷ₁ = 0.7
-   - 模型2预测：ŷ₂ = 0.8 / Model 2 predicts: ŷ₂ = 0.8
-   - 模型3预测：ŷ₃ = 0.6 / Model 3 predicts: ŷ₃ = 0.6
-   - 模型4预测：ŷ₄ = 0.75 / Model 4 predicts: ŷ₄ = 0.75
-   - 模型5预测：ŷ₅ = 0.65 / Model 5 predicts: ŷ₅ = 0.65
+   - 模型1预测：$\hat{y}_1 = 0.7$ / Model 1 predicts: $\hat{y}_1 = 0.7$
+   - 模型2预测：$\hat{y}_2 = 0.8$ / Model 2 predicts: $\hat{y}_2 = 0.8$
+   - 模型3预测：$\hat{y}_3 = 0.6$ / Model 3 predicts: $\hat{y}_3 = 0.6$
+   - 模型4预测：$\hat{y}_4 = 0.75$ / Model 4 predicts: $\hat{y}_4 = 0.75$
+   - 模型5预测：$\hat{y}_5 = 0.65$ / Model 5 predicts: $\hat{y}_5 = 0.65$
 
 3. **组合预测 / Combine Predictions:**
    - **分类 / Classification**: 多数投票 / Majority voting

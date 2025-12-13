@@ -81,11 +81,11 @@ $$
 
 **方差减少（回归）/ Variance Reduction (Regression):**
 $$
-Var(S) = \frac{1}{|S|} \sum_{i \in S} (y_i - \bar{y})^2
+\text{Var}(S) = \frac{1}{|S|} \sum_{i \in S} (y_i - \bar{y})^2
 $$
 
 $$
-VarReduction(S, A) = Var(S) - \sum_{v \in \text{Values}(A)} \frac{|S_v|}{|S|} Var(S_v)
+\text{VarReduction}(S, A) = \text{Var}(S) - \sum_{v \in \text{Values}(A)} \frac{|S_v|}{|S|} \text{Var}(S_v)
 $$
 
 **选择最佳分裂 / Choosing Best Split:**
@@ -327,8 +327,8 @@ IG(S, A) = H(S) - H(S|A) = 1.0 - 0.875 = 0.125
 $$
 
 **结论 / Conclusion:**
-按特征A分裂的信息增益为0.125。
-Information gain for splitting by feature A is 0.125.
+按特征 $A$ 分裂的信息增益为 $0.125$。
+Information gain for splitting by feature $A$ is $0.125$.
 
 ---
 

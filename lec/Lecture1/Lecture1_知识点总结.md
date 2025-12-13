@@ -50,16 +50,16 @@ Supervised learning uses labeled training data to learn a mapping from inputs to
 #### English
 Probability theory provides the mathematical foundation for machine learning. Key concepts include:
 - **Probability**: $P(A)$ measures the likelihood of event $A$
-- **Conditional Probability**: $`P(A|B)`$ is the probability of $A$ given $B$
-- **Bayes' Theorem**: $`P(A|B) = \frac{P(B|A)P(A)}{P(B)}`$
+- **Conditional Probability**: $P(A \mid B)$ is the probability of $A$ given $B$
+- **Bayes' Theorem**: $P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}$
 - **Expectation**: $E[X] = \sum_x x \cdot P(X=x)$
 - **Variance**: $\text{Var}(X) = E[X^2] - (E[X])^2$
 
 #### 中文
 概率论为机器学习提供数学基础。核心概念包括：
 - **概率**：$P(A)$ 衡量事件$A$发生的可能性
-- **条件概率**：$`P(A|B)`$ 是在$B$发生的条件下$A$的概率
-- **贝叶斯定理**：$`P(A|B) = \frac{P(B|A)P(A)}{P(B)}`$
+- **条件概率**：$P(A \mid B)$ 是在$B$发生的条件下$A$的概率
+- **贝叶斯定理**：$P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}$
 - **期望**：$E[X] = \sum_x x \cdot P(X=x)$
 - **方差**：$\text{Var}(X) = E[X^2] - (E[X])^2$
 

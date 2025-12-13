@@ -38,7 +38,7 @@ $$
 
 **目标函数 / Objective Function:**
 
-最小化均方误差 / Minimize mean squared error:
+最小化均方误差 / Minimize mean squared error:\
 $$
 J(\mathbf{w}, b) = \frac{1}{2M} \sum_{i=1}^M (y^{(i)} - \mathbf{w}^\top \mathbf{x}^{(i)} - b)^2
 $$

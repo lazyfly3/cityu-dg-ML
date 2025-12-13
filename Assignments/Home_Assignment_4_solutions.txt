@@ -1,0 +1,101 @@
+================================================================================
+文件: Home_Assignment_4_solutions.docx
+================================================================================
+
+Home Assignment № 4 Solutions
+November 26, 2025
+Exercise 1
+[2 points]. Prove that the eigenvalues of a real symmetric matrix A ∈ RN ×N , where A = AT , are real-valued (i.e., not complex-valued).  Prove also that the eigenvectors of A corresponding to diferent eigenvalues are orthogonal to each other.
+Proof.  a) let (λ, v) be any eigenpair of A.  Let A = AT  = A* ,
+we have
+< Av, Av > = v* A* Av = v* A* λv
+= λv* Av
+thus
+Since λ2  is real and non-negtive number, λ must be real.
+b)  For any real matrix A and any vectors x and y, we have
+< Ax, y >=< x, AT y > .
+We assume x and y are eigenvectors of A corresponding to distinct eigen- value λ and μ
+λ < x, y > =< λx, y > =< Ax, y >
+=< x, AT y >
+=< x, Ay >
+=< x, μy >
+= μ < x, y > .
+Therefore,
+(λ - μ) < x, y >= 0.
+Since λ  μ, we must have
+< x, y >= 0,
+that is, eigenvectors of real symmetry matrix are orthogonal.
+Exercise 2
+[5 points]. Derive the K-th largest direction of variance in principal compo- nent analysis (PCA).
+Solution: Finding the K-th largest direction of variance vK  in PCA corre- sponding to solving the optimization problem:
+max   vT Σv
+v
+s.t.    jj v jj   = 1
+vT vi  = 0, for i = 1, 2, . . . , K - 1,
+ ﬁnding v1  turns out to be
+max   vT Σv
+v
+We write down its Lagrangian
+L(v, λ) = vT Σv + λ(1 — jjv jj),                                (1)
+                                               (2)
+Hence Σv1  = λv1 , i.e.  v1  is an eigenvector of Σ with eigenvalue λ .  Since we
+constrain vv1  = 1, the value of the objective is precisely
+vΣv1  = λ,                                            (3)
+so the optimal value for λ is the largest eigenvalue of Σ, which is achieved when v1  is a unit eigenvector of Σ corresponding to its largest eigenvalue. For vK , the Lagrangian is
+K-1
+which can be written as
+Multiply both sides of the Eq.  (6) by vj , j = 1, . . . , K — 1, we have
+K-1
+Note that
+                                         (8)
+From the orthogonal constraints above we can conclude that
+ηj  = 0, j = 1, . . . , K — 1.
+Plugging these values back into the optimality equation above, we see that vK  must satisfy ΣvK  = λvK , i.e.  vK  is an eigenvector of Σ with eigenvalue λ . As before, the value of the objective function is then λ . To maximize, we want the largest eigenvalue, but we must respect the constraints that vK  is orthogonal to v1 , . . . , vK-1 . Thus to maximize the expression, vK  should be a unit eigenvector of Σ corresponding to its K-th largest eigenvalue.
+Exercise 3
+[5 points].  1) Suppose that a discrete-time linear system has outputs y[n] for the given inputs x[n], as shown in Fig. 1.  Determine the response y4 [n] when the input is as shown in Fig. 2.
+a)  [1 point].  Express x4 [n] as a linear combination of x1 [n], x2 [n], and x3 [n].
+b)  [1 point].  Using the fact that the system is linear, determine y4 [n], the response to x4 [n].
+c)  [1 point].  From the input-output pairs in Fig.  1, determine whether the system is time-invariant.
+2) Determine the discrete-time convolution of x[n] and h[n] for the fol- lowing two cases.
+a)  [1 point].  As shown in Fig. 3.
+b)  [1 point].  As shown in Fig. 4.
+Solution: 1)
+a)
+x4 [n] = 2x1 [n] - 2x2 [n] + x3 [n]
+b)
+y4 [n] = 2y1 [n] - 2y2 [n] + y3 [n]
+c) The system is not time-invariant because an input xi [n] + xi [n - 1] does not produce an output yi [n] + yi [n - 1].   The  input x1 [n] + x1 [n - 1] is x1 [n] + x1 [n - 1]  =  x2 [n], which we are told produces y2 [n].   Since y2 [n]  y1 [n] + y1 [n - 1], this system is not time-invariant.
+2)
+a)
+y[0] = 2
+y[1] = 4
+y[2] = 6
+y[3] = 8
+y[4] = 6
+y[5] = 4
+y[6] = 2
+y[7] = 0
+b)
+y[0] = 0
+y[1] = 0
+y[3] = 1
+y[5] = 1
+y[7] = 0
+Exercise 4
+[3 points] For a discrete-time signal x[n], the Discrete-Time Fourier Trans- form (DTFT) is deﬁned as
+n=-∞
+which is 2π-periodic. Its inverse transform is given by
+                                (10)
+Let x[n] and y[n] be two discrete-time signals, and assume they are absolutely summable. Prove the following property:
+where the convolution in the frequency domain is deﬁned (with 2π-periodicity) as
+Proof. Let z[n] = x[n]y[n].  By the deﬁnition of the DTFT,
+n=-∞                              n=-∞
+Substitute the inverse DTFT of x[n]:
+                                (14)
+Interchange the summation and integration, we obtain:
+Hence,
+Figure 1:
+Figure 2:
+Figure 3:
+Figure 4:
+

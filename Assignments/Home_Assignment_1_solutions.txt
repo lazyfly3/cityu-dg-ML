@@ -1,0 +1,68 @@
+================================================================================
+文件: Home_Assignment_1_solutions.docx
+================================================================================
+
+Home Assignment № 1 Solutions
+September 17, 2025
+Exercise 1
+[5 points]. This problem reviews basic concepts from probability.
+a)  [1 point].  A biased die has the following probabilities of landing on each face:
+I win if the die shows even.  What is the probability that I win?  Is this better or worse than a fair die (i.e., a die with equal probabilities for each face)?
+Solution:
+P [even] = P (2) + P (4) + P (6) = 0.1 + 0.2 + 0 = 0.3.  This is worse than a fair die which has probability 0.5 to land on an even number.
+b)  [1 point].  Recall that the expected value E[X] for a random variable X is
+where X is the set of values X may take on.  Similarly, the expected value of any function f of random variable X is
+Now consider the function below, which we call the “indicator function”
+Let X  be a random variable which takes on the values 3; 8 or 9 with probabilities p3 , p8  and p9  respectively.  Calculate E[I[X = 8]].
+Solution:
+c)  [2 points].  Recall the following deﬁnitions:
+• Entropy: H(X) =  -Σx∈X p(X = x) log2 p(X = x)  = -E[log2 p(X)]
+•  Joint entropy: H(X; Y) = -Σx∈X Σy∈Y p(X = x; Y = y) log2 p(X = x; Y = y)   = -E[log2 p(X; Y)]
+•  Conditional entropy: H(YjX) = -Σx∈X Σy∈Y p(X = x; Y = y) log2 p(Y = yjX = x)   = -E[log2 p(YjX)]
+Using the deﬁnitions of the entropy, joint entropy, and conditional entropy,
+prove the following chain rule for the entropy:
+H(X; Y) = H(Y) + H(X jY).
+Solution:
+= H(X) + H(YjX).
+d)  [1 point].  Recall that two random variables X and Y are independent if
+for all x ∈ X and all y ∈ Y ,   p(X = x; Y = y)  =  p(X = x)p(Y = y).
+If variables X and Y are independent, is I(X; Y) = 0?  If yes, prove it.  If no, give a counter example.
+Solution:
+Since variables X and Y are independent
+= 0.
+Exercise 2
+[4 points].  Given a training set D = {(x(i); y(i)); i = 1; . . . ; M}, where x(i)  ∈ RN  and y(i)  ∈ {1; 2; . . . ; C}, derive the maximum likelihood estimates of the naive Bayes for real valued xj(i)  modeled with a Laplacian distribution, i. e.,
+Solution:
+Proof.  Given a training set D = {(x(i); y(i)); i = 1; · · · ; M}, we write down the joint probability distribution of the data
+When we wish to explicitly view this as a function of the parameters φ and θ , we instead call it the likelihood function of the data L(φ; θ).  The principal of maximum likelihood says that we should choose φ , θ so as to make the data as high probability as possible.  That is, we should choose φ , θ to maximize L(φ; θ).  Instead of maximizing L(φ; θ), we can also maximize any strictly increasing function of L(φ; θ).   In particular, the derivations will be a bit simpler if we instead maximize the log likelihood
+For real valued xj , we model it with a Laplacian distribution
+If we pick out all terms in Eq. (2) that depend only on μjjc , σjjc, we have
+Since it is the extreme problem of the location parameter for Laplace distribution, when μjjc  is the median, the derivative w.r.t. μjjc  will be zero.
+Taking the derivative w.r.t. σjjc  and setting it to zero, we have
+Exercise 3
+[4 points]. Prove that in binary classiﬁcation, the posterior of linear discrim- inant analysis, i.e., p(y = 1jx; φ; μ; Σ), admits a sigmoid form
+where θ is a function of {φ; μ; Σ}.  Hint: remember to use the convention of letting x0  = 1.
+Solution:
+Proof.  Making use of the Bayes’ rule, the law of total probability, and the chain rule of probability, we have
+(6)
+(7)
+(8)
+This equation seems very much like what we are looking for.  Let’s take a closer look at the fraction
+(9)
+where we let x0  = 1. Therefore, we have
+                                 (10)
+where
+[2 points].  The Kullback–Leibler (KL) divergence between two continuous distributions P (x) and Q(x) is
+For an N-dimensional vector x, the multivariate Gaussian distribution is
+Now, let two multivariate Gaussian distributions P1  and P2  be N(x; μ1; Σ 1 ) and N(x; μ2; Σ2 ), both of N dimensions.  The symmetrized KL  (also called the Jeﬀreys divergence) is deﬁned as
+J(P1 ; P2 )  :=  DKL (P1ⅡP2 )  +  DKL (P2ⅡP1 ).
+Prove that J(P1 ; P2 ) can be written in closed form as
+Hints: tr(A) is the trace operator of a square matrix A, which is the sum of diagonal elements, i.e., Σi Aii.  Since the trace of a scalar is itself, (x-μ)T Σ-1(x-μ) ∈ R is equal to tr((x-μ)T Σ-1(x-μ)). Moreover, the trace
+μ)T ).
+Solution:
+Proof.
+DKL (P1ⅡP2 )
+= EP1   [log P1  - log P2]
+face | 1 | 2 | 3 | 4 | 5 | 6
+P(face) | .1 | .1 | .2 | .2 | .4 | 0
+

@@ -1,0 +1,93 @@
+================================================================================
+文件: Home_Assignment_3_solutions.docx
+================================================================================
+
+Solutions for Home Assignment №3
+November 8, 2025
+Exercise 1
+[3 points]. Prove the following matrix identity
+(P-1 + BTR-1B)-1BTR-1  = PBT (BP BT + R)-1 ,               (1)
+where P ∈ Rn×n , B ∈ Rm×n, and R ∈ Rm×m.  P and R are invertible. Note that if m 冬 n, it will be much cheaper to evaluate the right-hand side than the left-hand side. Hint: right multiplying both sides by (BP BT + R). With similar arguments, prove a special case of Eq. (1)
+(I + AB)-1A = A(I + BA)-1 ,
+where A ∈ Rn×m  and B ∈ Rm×n.
+Solution:
+Proof. We manipulate the above matrix identity by right multiplying both sides by (BP BT + R). For the left-hand side, we have
+(P-1 + BTR-1B)-1BTR-1(BP BT + R)
+=(P-1 + BTR-1B)-1(BTR-1BP BT + BTR-1R)
+=(P-1 + BTR-1B)-1(BTR-1BP BT + P-1PBT )
+=(P-1 + BTR-1B)-1(BTR-1B + P-1)PBT
+=PBT .
+It is trivial that the right-hand side is also equal to P BT .  For the special case, we have
+(P-1 + BTR-1B)-1BTR-1
+=(P-1(PP-1 + PBTR-1B))-1BTR-1
+and
+PBT (BP BT + R)-1
+=PBT ((BP BTR-1 + RR-1)R)-1
+Hence, assuming A = PB TR-1  and B = B  (as illustrated above), we obtain
+(I + AB)-1A = A(I + BA)-1 .
+Exercise 2
+[5 points]. Say you have M linear equations in N variables. In matrix form we write Ax = y, where A ∈ RM×N , x ∈ RN×1, and y ∈ RM ×1 .  Given a proof or a counterexample for each of the following.
+a)  [1 point].  If N = M, there is always at most one solution.
+b)  [1 point]. If N > M, you can always solve Ax = y.
+c)  [1 point].  If N > M, the nullspace of A has dimension greater than zero.
+d)  [1 point]. If N < M, then for some y there is no solution of Ax = y.
+e)  [1 point]. If N < M, the only solution of Ax = 0 is x = 0.
+Hint:  The null space of A,  denoted by V , contains the set of vectors that satisfy {x ∈ VjAx = 0}.
+Solution:
+a)  False. One counterexample is A=  .
+ .
+c) True.
+Proof. From the Rank-nullity theorem we have
+Rank(A) + Nullity(A) = N.
+We also know that
+Rank(A) ≤ M.
+Thus
+Nullity(A) = N - Rank(A) ≥ N - M > 0.
+ .
+e)  False. One counterexample is A=  .
+Exercise 3
+[4 points].  Coordinate Descent for Linear Regression.  We would like to solve the following linear regression problem
+                                 (2)
+where w ∈ RN ×1  and x(i)  ∈ RN ×1  using coordinate descent.
+a)  [2 points].  In the current iteration, wk  is selected for update.  Please prove the following update rule:
+b)  [2 points].  Prove that the following update rule for wk   is equivalent to Eq. (3).
+w ← wk ,                                                                             (4)
+r(i)  ← r(i) + (w - wk )xk(i)     ∀i ∈ {1, 2, . . . M}.              (6)
+where r(i)  is the residual
+                                  (7)
+Compare the two update rules. Which one is better and why?
+Solution:
+a)  Proof.
+Find a closed form solution:
+ = 0                                            (9)
+So:
+b)  Proof.  Rewrite the expressions above as
+wl(+1)  = wk(t) ,                                                                              (15)
+                                               (16)
+r((+)1)  = r(())  + (wl(+1)  — wk(t+1))xk(i) ,                                         (17)
+Thus we have
+The latter is better.  Because the cost for the former is O(m · n2 ), but the cost for the latter one is O(m · n).
+Exercise 4
+[3 points].  Consider the soft-margin SVM problem using an l2-norm penalty on the slack variables, in a feature space induced by a kernel map φ(·) with K(xi , xj ) = φ(xi )T φ(xj )
+s.t. yi  (wT φ(xi ) + b) ≥ 1 — ξi ,    8i
+ξi  ≥ 0,    8i,                                                            (19)
+where ξi  is the slack variable that allows the i th point to violate the margin.
+a)  [1 point].  Show that the non-negative constraint on ξi  is redundant, and hence can be dropped. Hint: show that if ξi  < 0 and the margin constraint is satisﬁed, then ξi  = 0 is also a solution with lower cost.
+b)  [1 point].  Derive the Lagrangian.
+c)  [1 point].  Derive the SVM dual problem in terms of the kernel K.
+Solution:
+a) We show that the non-negativity constraint on ξi  is redundant.  Suppose
+that for some i, ξi  < 0 and the margin constraint yi  (wT φ(xi ) + b) ≥ 1-ξi is satisﬁed. If we set ξi,  = 0, then the margin constraint still holds because yi  (wT φ(xi ) + b) ≥ 1 - ξi  > 1 = 1 - ξi, .                    (20)
+Moreover, since the cost function includes a positive term Cξ, setting
+ξi,   = 0 reduces the objective value.   Hence,  any optimal solution must satisfy and the explicit constraint ξi  ≥ 0 can be dropped.
+b) The Lagrangian of the problem (without the non-negative constraint) is given by:
+(21)
+where Qi  ≥ 0 are Lagrange multipliers associated with the margin con- straints.
+c) To derive the dual, we minimize the Lagrangian over the primal variables w , b, and ξ . First, take derivatives and set them to zero:
+                                                            (23)
+   )    .                                     (24)
+Substituting these back into the Lagrangian gives:
+After simpliﬁcation, the dual problem becomes:
+n
+This is the dual formulation of the l2-norm soft-margin SVM. The kernel trick can be directly applied through K(xi , xj ) = φ(xi )T φ(xj ).
+

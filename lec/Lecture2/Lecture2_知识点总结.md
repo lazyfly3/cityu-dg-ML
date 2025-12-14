@@ -38,7 +38,8 @@ $$
 
 **目标函数 / Objective Function:**
 
-最小化均方误差 / Minimize mean squared error:\
+最小化均方误差 / Minimize mean squared error:
+
 $$
 J(\mathbf{w}, b) = \frac{1}{2M} \sum_{i=1}^M (y^{(i)} - \mathbf{w}^\top \mathbf{x}^{(i)} - b)^2
 $$
@@ -65,13 +66,15 @@ Maximum Likelihood Estimation (MLE) is a method to estimate parameters by maximi
 **似然函数 / Likelihood Function:**
 
 假设误差服从高斯分布 / Assume errors follow Gaussian distribution:
+
 $$
-P(y|\mathbf{x}, \mathbf{w}, b) = \mathcal{N}(y; \mathbf{w}^\top \mathbf{x} + b, \sigma^2)
+P(y \mid \mathbf{x}, \mathbf{w}, b) = \mathcal{N}(y; \mathbf{w}^\top \mathbf{x} + b, \sigma^2)
 $$
 
 **对数似然 / Log-Likelihood:**
+
 $$
-\ell(\mathbf{w}, b) = \sum_{i=1}^M \log P(y^{(i)}|\mathbf{x}^{(i)}, \mathbf{w}, b)
+\ell(\mathbf{w}, b) = \sum_{i=1}^M \log P(y^{(i)} \mid \mathbf{x}^{(i)}, \mathbf{w}, b)
 $$
 
 $$
@@ -106,6 +109,7 @@ $$
 **梯度计算 / Gradient Calculation:**
 
 对线性回归 / For linear regression:
+
 $$
 \frac{\partial J}{\partial w_j} = -\frac{1}{M}\sum_{i=1}^M (y^{(i)} - \hat{y}^{(i)}) x_j^{(i)}
 $$
@@ -150,6 +154,7 @@ $$
 - $\|\mathbf{w}\|^2 = \sum_j w_j^2$：权重的L2范数平方 / Squared L2 norm of weights
 
 **L1正则化（Lasso回归）/ L1 Regularization (Lasso Regression):**
+
 $$
 J(\mathbf{w}) = \frac{1}{2M}\sum_{i=1}^M (y^{(i)} - \hat{y}^{(i)})^2 + \lambda\|\mathbf{w}\|_1
 $$

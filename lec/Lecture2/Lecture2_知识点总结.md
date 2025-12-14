@@ -177,12 +177,14 @@ $$
 
 #### English
 For linear regression, the optimal solution can be found analytically using the normal equation:
+
 $$
 \mathbf{w}^* = (\mathbf{X}^\top \mathbf{X})^{-1} \mathbf{X}^\top \mathbf{y}
 $$
 
 #### 中文
 对于线性回归，可以使用正规方程解析地找到最优解：
+
 $$
 \mathbf{w}^* = (\mathbf{X}^\top \mathbf{X})^{-1} \mathbf{X}^\top \mathbf{y}
 $$
@@ -203,7 +205,9 @@ Polynomial regression extends linear regression by adding polynomial features, a
 多项式回归通过添加多项式特征扩展线性回归，允许模型捕捉非线性关系。
 
 **多项式特征 / Polynomial Features:**
+
 对于一维输入 / For 1D input:
+
 $$
 \phi(x) = [1, x, x^2, x^3, \ldots, x^d]
 $$

@@ -297,6 +297,7 @@ Use gradient descent to minimize $f(x) = x^2$ with learning rate $\alpha = 0.1$,
 **详细解答 / Detailed Solution:**
 
 **步骤1：计算梯度 / Step 1: Calculate Gradient**
+
 $$
 \nabla f(x) = \frac{d}{dx}(x^2) = 2x
 $$
@@ -331,11 +332,13 @@ Compare linear regression objective functions with and without L2 regularization
 **详细解答 / Detailed Solution:**
 
 **无正则化 / Without Regularization:**
+
 $$
 J(\mathbf{w}) = \frac{1}{2M}\sum_{i=1}^M (y^{(i)} - \mathbf{w}^\top \mathbf{x}^{(i)})^2
 $$
 
 **有L2正则化 / With L2 Regularization:**
+
 $$
 J(\mathbf{w}) = \frac{1}{2M}\sum_{i=1}^M (y^{(i)} - \mathbf{w}^\top \mathbf{x}^{(i)})^2 + \frac{\lambda}{2}\|\mathbf{w}\|^2
 $$

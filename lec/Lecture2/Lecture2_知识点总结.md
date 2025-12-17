@@ -100,6 +100,7 @@ Gradient descent is an optimization algorithm that iteratively moves in the dire
 梯度下降是一种优化算法，通过迭代地向最陡下降方向（负梯度方向）移动来找到函数的最小值。
 
 **更新规则 / Update Rule:**
+
 $$
 \mathbf{w}^{(t+1)} = \mathbf{w}^{(t)} - \alpha \nabla_{\mathbf{w}} J(\mathbf{w}^{(t)})
 $$
@@ -147,6 +148,7 @@ Regularization is a technique to prevent overfitting by adding a penalty term to
 **L2正则化（Ridge回归）/ L2 Regularization (Ridge Regression):**
 
 **目标函数 / Objective Function:**
+
 $$
 J(\mathbf{w}) = \frac{1}{2M}\sum_{i=1}^M (y^{(i)} - \hat{y}^{(i)})^2 + \frac{\lambda}{2}\|\mathbf{w}\|^2
 $$

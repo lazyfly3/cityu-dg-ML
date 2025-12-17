@@ -20,11 +20,13 @@ Linear regression models the relationship between a dependent variable and one o
 **数学定义 / Mathematical Definition:**
 
 **线性模型 / Linear Model:**
+
 $$
 y = w_0 + w_1 x_1 + w_2 x_2 + \cdots + w_n x_n + \epsilon
 $$
 
 **向量形式 / Vector Form:**
+
 $$
 y = \mathbf{w}^\top \mathbf{x} + b + \epsilon
 $$

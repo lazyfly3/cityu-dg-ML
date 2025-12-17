@@ -327,6 +327,7 @@ $$
 $$
 
 **步骤2：重写为显式形式 / Step 2: Rewrite in Explicit Form**
+
 $$
 x_2 = 2x_1 + 1
 $$

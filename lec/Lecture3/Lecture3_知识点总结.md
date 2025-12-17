@@ -283,23 +283,23 @@ $$
 
 **计算 / Calculations:**
 
-1. **$z = 0$:**
+**1. $z = 0$:**
 
-   $$
-   \sigma(0) = \frac{1}{1 + e^{0}} = \frac{1}{1 + 1} = \frac{1}{2} = 0.5
-   $$
+$$
+\sigma(0) = \frac{1}{1 + e^{0}} = \frac{1}{1 + 1} = \frac{1}{2} = 0.5
+$$
 
-2. **$z = 2$:**
+**2. $z = 2$:**
 
-   $$
-   \sigma(2) = \frac{1}{1 + e^{-2}} = \frac{1}{1 + 0.135} \approx \frac{1}{1.135} \approx 0.881
-   $$
+$$
+\sigma(2) = \frac{1}{1 + e^{-2}} = \frac{1}{1 + 0.135} \approx \frac{1}{1.135} \approx 0.881
+$$
 
-3. **$z = -2$:**
+**3. $z = -2$:**
 
-   $$
-   \sigma(-2) = \frac{1}{1 + e^{2}} = \frac{1}{1 + 7.389} \approx \frac{1}{8.389} \approx 0.119
-   $$
+$$
+\sigma(-2) = \frac{1}{1 + e^{2}} = \frac{1}{1 + 7.389} \approx \frac{1}{8.389} \approx 0.119
+$$
 
 **解释 / Interpretation:**
 - $z = 0$ 时，sigmoid输出 $0.5$，表示不确定 / When $z = 0$, sigmoid outputs $0.5$, indicating uncertainty
